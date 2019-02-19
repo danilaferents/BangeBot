@@ -80,6 +80,10 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="AddShowsTextFieldWasTouched:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="Ypo-qT-4wB"/>
+                                                    <action selector="RandomBingeShowBtnWasPressed:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Sdc-2C-58g"/>
+                                                </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5D4-Zb-gc8">
                                                 <rect key="frame" x="0.0" y="56" width="335" height="40"/>

@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         ShowsStackView.isHidden = true
         RandomShowStackView.isHidden = true
+        AddShowBtn.isEnabled = false
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -37,9 +38,18 @@ class ViewController: UIViewController {
         BingeBotSpokenLabel.isHidden = false
         
     }
+    
+    @IBAction func AddShowsTextFieldWasTouched(_ sender: Any) {
+        AddShowBtn.isEnabled = true
+    }
     @IBAction func AddShowBtnWasPressed(_ sender: Any) {
+        
         guard let showName = AddShowTextField.text
             else { return }
+        if showName.isEmpty{
+            //AddShowBtn.isEnabled = false
+            return
+        }
         shows.append(showName)
         updateShowsLabel()
         AddShowTextField.text = ""
